@@ -29,7 +29,7 @@ a {
 
 /* HEADER */
 header {
-    position: fixed;
+    position: fixed; /* position:fixed & absoulte -> display:block*/
     border-bottom: 1px solid var(--grey);
     background-color: rgb(246, 245, 241);
     width: 100%;
@@ -46,41 +46,85 @@ header {
     box-sizing: border-box;
     height: 75px;
     margin: 22.5px;
-    padding:;
     /* height:75px;
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto; */
 }
-.menu {
+/* .menu {
     display: flex;
     flex-direction: column;
     font-size: 13px;
         
-}
+} */ 
 .user-menu {
     display: flex;
+    font-family: Arial, sans-serif;
     
 }
-.user-menu a {
+.user-menu li {
+    position: relative;
+    height: 40.2px;
     display: block;
+}
+.user-menu li::before {
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: var(--grey);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+.user-menu li:first-child::before {
+    display: none;
+}
+.user-menu a {
+    background-color: yellow;
+    display: block;
+    box-sizing: border-box;
+    font-size: 12px;
     padding: 11px 16px;
     color: var(--grey);
-    border:1px solid black;
-    height: 40.2px;
+    text-align: center;
+
+    /* margin: auto; */
 }
 .user-menu a:hover{
     color: var(--black);
 }
-.user-menu li>span {
-    display: inline-block;
-    font-size: 36px;
-    font-weight: 600;
-    color: var(--black);
+.search {
+    height: 34px;
+    position: relative;
+}
+.search input {
+    display: block;
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
     border: 1px solid var(--grey);
-    padding: 10px;
-    border-radius: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: var(--black);
+    transition: width .4s;
+    font-size: 12px;
+}
+.search input:focus {
+    width: 190px;
+    border-color: #669900;
+}
+.search .material-symbols-outlined {
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+  
 }
 .nav-menu {
     display: flex;
@@ -99,16 +143,14 @@ header {
     display: block;
     height: 30px;
     border: 1px solid rgb(204,204,204);
-    border-radius: ;
+    
     background-color: rgb(200,200,200);
 }
-
 .dropdown-list {
     display: flex;
     background-color: var(--brown) ;
     justify-content: center;
-    padding:20px 0;
-    
+    padding:20px 0;  
 }
 .dropdown-list-content{
     

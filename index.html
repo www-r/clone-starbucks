@@ -27,6 +27,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="css/main.css" />
+
+    <script defer src="js/main.js"></script>
+    <!-- defer를 달아야 모든 html이후에 js가 작동한다 -->
 </head>
 
 <body>
@@ -38,28 +41,29 @@
                 <a class="logo" href="/"> <!-- /로 시작하면 절대경로-->
                     <img  src="images/starbucks_logo.png" alt="starbucks-logo">
                 </a>
-                <div class="menu">
-                    <ul class="user-menu">
-                        <li><a href="/signin">Sign In</a></li>
-                        <li><a href="#">My Starbucks</a></li>
-                        <li><a href="#">Customer Services & Ideas</a></li>
-                        <li><a href="javascript:void(0)">Find a Store</a></li>
-                        <li>
-                            <span class="material-symbols-outlined">
-                                search
-                            </span>
-                            <!-- <input type="text" class="nodisplay"/> -->
-                        </li>
-                    </ul>
-                    <ul class="nav-menu">
-                        <li>coffee</li>
-                        <li>menu</li>
-                        <li>store</li>
-                        <li>responsibility</li>
-                        <li>my starbucks rewards</li>
-                        <li>what's new</li>
-                    </ul>
+                <ul class="user-menu">
+                    <li><a href="/signin">Sign In</a></li>
+                    <li><a href="#">My Starbucks</a></li>
+                    <li><a href="#">Customer Services & Ideas</a></li>
+                    <li><a href="javascript:void(0)">Find a Store</a></li>
+                    <!-- # 보다는 javascript:void(0) 추천-->
+                        
+                </ul>
+                <div class="search">
+                    <input type="text" class="nodisplay"/>
+                    <div class="material-symbols-outlined">
+                        search
+                    </div>
                 </div>
+                <ul class="nav-menu">
+                    <li>coffee</li>
+                    <li>menu</li>
+                    <li>store</li>
+                    <li>responsibility</li>
+                    <li>my starbucks rewards</li>
+                    <li>what's new</li>
+                </ul>
+                
             </section>
             <section class="dropdown nodisplay">
                 <div class="dropdown-list">
