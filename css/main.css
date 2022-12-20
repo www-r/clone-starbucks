@@ -37,8 +37,8 @@ header {
 .header-menu {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    height:121px;
+    width: 1100px;
+    height:120px;
     position: relative;
 }
 .header-menu .logo {
@@ -124,7 +124,10 @@ header {
     bottom: 0;
     right: 5px;
     margin: auto;
-  
+    transition: /*all*/ .4s;
+}
+.search.focused .material-symbols-outlined {
+    opacity: 0;
 }
 .nav-menu {
     display: flex;
